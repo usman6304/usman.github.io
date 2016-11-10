@@ -811,25 +811,6 @@
         </form>
     </div>
 </div>
-			<?php 				  
-				if(isset($_POST['btnsend'])){
-					$name=$_POST['name'];
-					$email=$_POST['email'];
-					$sub=$_POST['subject'];
-					$message=$_POST['message'];
-					 if (($name=="")||($email=="")||($sub=="")||($message==""))
-						{
-						echo "<center>All fields are required, please fill <a href='#form'>the form</a> again.</center>";
-						}
-						else{		
-							$from="From: $name<$email>\r\nReturn-path: $email";
-							$subject="Message sent using your Portfolio contact form";
-							mail("m.usman6304@gmail.com", $sub, $message, $from);
-							echo "Email sent!";
-		     			}
-				}
-				?>       
-		 
                   </div>
                </section>
 			   <br><br>
